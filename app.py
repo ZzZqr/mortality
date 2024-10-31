@@ -4,7 +4,8 @@ import pickle
 model_path = './model/xgb_model.pkl'
 
 # 加载模型
-loaded_model = pickle.load(model_path)
+with open(model_path, 'rb') as f:
+    loaded_model = pickle.load(f)
 # 加载之前训练好的模型
 
 # 创建Streamlit应用程序界面
