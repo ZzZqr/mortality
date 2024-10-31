@@ -1,10 +1,10 @@
 import streamlit as st
-import joblib
+import pickle
 # 定义模型文件的完整路径
-model_path = 'model/xgb_model.pkl'
+model_path = './model/xgb_model.pkl'
 
 # 加载模型
-loaded_model = joblib.load(model_path)
+loaded_model = pickle.load(model_path)
 # 加载之前训练好的模型
 
 # 创建Streamlit应用程序界面
