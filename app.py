@@ -22,7 +22,7 @@ pre_shock = st.selectbox('pre_shock', options=["Yes", "No"])
 area_of_burn = st.number_input('area_of_burn (%)', min_value=20, max_value=100, step=1)
 three = st.number_input('Ⅲ (%)', min_value=0, max_value=80, step=1)
 sepsis = st.selectbox('sepsis', options=["Yes", "No"])
-type_of_burn = st.selectbox('type_of_burn ', min_value=1, max_value=5, step=1)
+type_of_burn = st.selectbox('type_of_burn ', options=[1, 2, 3, 4, 5])
 
 if new_onset_shock == "Yes":
     new_onset_shock = 1
