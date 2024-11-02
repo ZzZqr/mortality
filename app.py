@@ -12,7 +12,7 @@ loaded_model = joblib.load(model_path)
 # 加载之前训练好的模型
 
 # 创建Streamlit应用程序界面
-st.title('Random Forest Model Deployment')
+st.title('XGBoost Model Deployment')
 st.write('Enter some input features to make predictions:')
 
 # 创建输入框用于用户输入特征
