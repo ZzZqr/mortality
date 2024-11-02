@@ -22,9 +22,20 @@ SOFA = st.number_input('SOFA', min_value=0, max_value=9, step=1)
 MDR = st.selectbox('MDR', options=["Yes", "No"])
 pre_shock = st.selectbox('pre_shock', options=["Yes", "No"])
 area_of_burn = st.number_input('area_of_burn (%)', min_value=0, max_value=100, step=1)
-three = st.number_input('Ⅲ (%)', min_value=0, max_value=80, step=1)
+three = st.number_input('Ⅲ (%)', min_value=0, max_value=100, step=1)
 sepsis = st.selectbox('sepsis', options=["Yes", "No"])
-type_of_burn = st.selectbox('type_of_burn ', options=[1, 2, 3, 4, 5])
+type_of_burn = st.selectbox('type_of_burn ', options=["Flame burn", "Scald", "Chemical burn", "Explosion", "Electrical injury"])
+
+if type_of_burn == 'Flame burn':
+    type_of_burn = 1
+elif type_of_burn == "Scald":
+    type_of_burn = 2
+elif type_of_burn == "Chemical burn":
+    type_of_burn = 3
+elif type_of_burn == "Explosion":
+    type_of_burn = 4
+elif type_of_burn == "Electrical injury":
+    type_of_burn = 5
 
 if new_onset_shock == "Yes":
     new_onset_shock = 1
@@ -61,9 +72,10 @@ if st.button('Predict'):
     # predict = loaded_model.predict(df)
     # print(prediction)
     # print(predict)
+    f = round(float(prediction[0][1]),3)
 
     # 显示预测结果
-    st.write(f'Mortality Probability Prediction:{round(prediction[0][1],3)}')
+    st.write(f'Mortality Probability Prediction: {f}')
 # # 运行Streamlit应用程序
 # if __name__ == '__main__':
 #     # st.run()
