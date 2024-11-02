@@ -58,12 +58,12 @@ if st.button('Predict'):
 
     # 使用加载的模型进行预测
     prediction = loaded_model.predict_proba(df)
-    predict = loaded_model.predict(df)
-    print(prediction)
-    print(predict)
+    # predict = loaded_model.predict(df)
+    # print(prediction)
+    # print(predict)
 
     # 显示预测结果
-    st.write(f'Mortality Probability Prediction:{prediction[0][1]}')
+    st.write(f'Mortality Probability Prediction:{round(prediction[0][1],3)}')
 # # 运行Streamlit应用程序
 # if __name__ == '__main__':
 #     # st.run()
