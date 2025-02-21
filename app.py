@@ -2,7 +2,6 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
-from sklearn.preprocessing import StandardScaler
 
 # 定义模型文件的完整路径
 model_path = 'model/gbt_model.joblib'
