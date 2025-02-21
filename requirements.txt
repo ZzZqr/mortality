@@ -3,4 +3,3 @@ scikit-learn
 xgboost
 numpy
 pandas
-python==3.9
